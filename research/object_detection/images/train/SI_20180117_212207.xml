@@ -1,13 +1,13 @@
 <annotation>
 	<folder>train</folder>
 	<filename>SI_20180117_212207.jpg</filename>
-	<path>H:\Work\AR\TensorFlow\Source\tensorflow-gpu\research\object_detection\images\train\SI_20180117_212207.jpg</path>
+	<path>E:\ff\object_detection\images\train\SI_20180117_212207.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
 	<size>
-		<width>1025</width>
-		<height>1025</height>
+		<width>256</width>
+		<height>256</height>
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>298</xmin>
-			<ymin>400</ymin>
-			<xmax>702</xmax>
-			<ymax>611</ymax>
+			<xmin>77</xmin>
+			<ymin>99</ymin>
+			<xmax>176</xmax>
+			<ymax>162</ymax>
 		</bndbox>
 	</object>
 </annotation>

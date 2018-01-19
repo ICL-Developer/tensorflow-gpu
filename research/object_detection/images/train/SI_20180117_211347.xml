@@ -1,13 +1,13 @@
 <annotation>
 	<folder>train</folder>
 	<filename>SI_20180117_211347.jpg</filename>
-	<path>H:\Work\AR\TensorFlow\Source\tensorflow-gpu\research\object_detection\images\train\SI_20180117_211347.jpg</path>
+	<path>E:\ff\object_detection\images\train\SI_20180117_211347.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
 	<size>
-		<width>1025</width>
-		<height>1025</height>
+		<width>256</width>
+		<height>256</height>
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>113</xmin>
-			<ymin>401</ymin>
-			<xmax>252</xmax>
-			<ymax>723</ymax>
+			<xmin>29</xmin>
+			<ymin>102</ymin>
+			<xmax>63</xmax>
+			<ymax>181</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -29,10 +29,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>365</xmin>
-			<ymin>419</ymin>
-			<xmax>518</xmax>
-			<ymax>703</ymax>
+			<xmin>93</xmin>
+			<ymin>105</ymin>
+			<xmax>125</xmax>
+			<ymax>176</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -41,10 +41,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>588</xmin>
-			<ymin>441</ymin>
-			<xmax>722</xmax>
-			<ymax>743</ymax>
+			<xmin>151</xmin>
+			<ymin>109</ymin>
+			<xmax>180</xmax>
+			<ymax>188</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -53,10 +53,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>819</xmin>
-			<ymin>420</ymin>
-			<xmax>953</xmax>
-			<ymax>702</ymax>
+			<xmin>206</xmin>
+			<ymin>105</ymin>
+			<xmax>235</xmax>
+			<ymax>175</ymax>
 		</bndbox>
 	</object>
 </annotation>
