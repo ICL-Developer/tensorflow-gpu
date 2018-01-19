@@ -1,0 +1,17 @@
+filename,width,height,class,xmin,ymin,xmax,ymax
+1.jpg,0,0,WoodenBox_withscrews,89,115,1509,857
+10.jpg,0,0,screw_type1_silver,857,219,1045,689
+11.jpg,0,0,screw_type1_silver,1037,91,1721,717
+12.jpg,0,0,inner_hole,288,527,563,802
+12.jpg,0,0,outterhole,188,298,826,980
+13.jpg,0,0,outterhole,419,720,641,986
+14.jpg,0,0,screw_type2_silver,363,386,563,1030
+15.jpg,0,0,screw_type2_silver,210,802,901,1083
+2.jpg,0,0,screw_type2_black,332,527,569,1145
+3.jpg,0,0,screw_type2_black,301,723,554,1255
+4.jpg,0,0,WoodenBox_withscrews,13,113,1531,865
+5.jpg,0,0,screw_type1_black,388,492,632,1061
+6.jpg,0,0,WoodenBox_withscrews,11,111,1517,847
+7.jpg,0,0,screw_type1_black,376,417,629,1039
+8.jpg,0,0,screw_type1_black,313,814,651,1283
+9.jpg,0,0,WoodenBox_withscrews,99,65,1601,777

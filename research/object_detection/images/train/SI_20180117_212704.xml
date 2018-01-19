@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>SI_20180117_212704.jpg</filename>
+	<path>H:\Work\AR\TensorFlow\Source\tensorflow-gpu\research\object_detection\images\train\SI_20180117_212704.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1371</width>
+		<height>1371</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>screwtype1black</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>543</xmin>
+			<ymin>230</ymin>
+			<xmax>785</xmax>
+			<ymax>875</ymax>
+		</bndbox>
+	</object>
+</annotation>

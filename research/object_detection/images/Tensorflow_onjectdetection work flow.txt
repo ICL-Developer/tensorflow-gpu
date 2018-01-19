@@ -1,0 +1,179 @@
+step for generating .csv:
+-------------------------
+place images in train and test folder inside images(objectdetection folder)=tensorflow models
+
+then copy xml_to_csv.py from raccon project
+
+in xml_to_csv.py change the following lines
+
+ image_path = os.path.join(os.getcwd(), 'images/{}'.format(directory))
+ xml_df.to_csv('data/{}_labels.csv'.format(directory), index=None)
+
+type command python xml_to_csv.py
+
+step for generating tfrecord:
+-------------------------
+
+copy generate_tfrecord.py for raccon project
+
+change below lines
+
+if(row_label == 'racoon'
+return 1
+
+to  how many classicifaction images or labes are added for the tensorflow project
+
+ if row_label == 'screw_type2_black':
+        return 1
+    elif row_label == 'screw_type1_silver':
+        return 2
+    elif row_label == 'screw_type1_black':
+        return 3
+    elif row_label == 'screw_type2_silver':
+        return 4
+    else:
+        None
+		
+		
+NOTE: 
+======
+Error nets not found data abstraction try to add the models project folder in path and slim folder
+
+install the objectdetection:
+============================
+
+get into reaserch folder inside the tensorflow models and type in cmd
+
+python setup.py install
+
+which fixes all path and dependecies for object detection 
+
+
+generating the TFRecors:
+========================
+create a training folder inside the object dection folder
+
+edit the generate_tfrecord.py
+
+add  "flags.DEFINE_string('tftype', '', 'tftype train or test')" and change this one to "imagepath = os.path.join('images/',FLAGS.tftype)"
+
+copy the commands from generate_tfrecord.pf on the first 4 lines
+
+ 
+  python generate_tfrecord.py --csv_input=data/train_labels.csv  --output_path=data/train.record --tftype=train
+
+ 
+  python generate_tfrecord.py --csv_input=data/test_labels.csv  --output_path=data/test.record --tftype=test
+ 
+  
+ NOTE:
+=======
+if you get this error
+
+ raise TypeError(message)
+TypeError: None has type <class 'NoneType'>, but expected one of: (<class 'int'>,)
+
+
+try to check the  names in 
+
+if row_label == 'screw_type2_black':
+        return 1
+    elif row_label == 'screw_type1_silver':
+        return 2
+    elif row_label == 'screw_type1_black':
+        return 3
+    elif row_label == 'screw_type2_silver':
+        return 4
+    else:
+        None
+		
+matching with the labeling given to all images
+
+creating a .pbxt file:
+======================
+create a .pbxt file inside training folder.
+
+add the data in follwing format
+
+item{
+id: your ID always start from '1'
+name: 'your label names given inside the images'
+}
+
+The data should match exactly with the generate_tfrecord.py created in class_text_to_int function (line 36)
+
+Example we have 4 label so 4 id inside the .pbtxt file 
+
+item{
+id:1
+name: 'screwtype1silver'
+}
+item{
+id:2
+name: 'screwtype1black'
+}
+
+
+item{
+id:3
+name: 'screwtype2silver'
+}
+
+item{
+id:4
+name: 'screw_type2_silver'
+}
+
+
+setting the files for generating the .pb file:
+==============================================
+download the config file and 7 zip file of ssd_mobilenet_v1_coco_11_06_2017 from github 
+
+NOTE: check if the config file and zip file are in below location if not then download from the github tensorflow project.
+
+config file location: Tensorflow-models\research\object_detection\samples\configs
+
+.zip file : Tensorflow-models\research\object_detection in this folder.
+
+copy the config file in to the training folder 
+
+chaning the config file according to our requirement:
+
+1.change "num_classes:37" to how many labels are there for example "4" for our test project.
+
+2. change all the "PATH_TO_BE_CONFIGURED" to the respective paths 
+
+=>"PATH_TO_BE_CONFIGURED/model.ckpt" to "YOUR_PATH FOR_CONFIG_FILE/model.ckpt" 
+example:"ssd_mobilenet_v1_coco_2017_11_17/model.ckpt"(line 158)
+
+=> "PATH_TO_BE_CONFIGURED/train.record" to "YOUR_PATH FOR_TRAIN_RECORD/train.record" 
+example:"data/train.record"(line 177)
+
+=> "PATH_TO_BE_CONFIGURED/icube-detection.pbtxt.pbtxt" to "YOUR_PATH FOR_'.pbtxt'_FILE/icube-detection.pbtxt.pbtxt" 
+example:"data/icube-detection.pbtxt.pbtxt"(line 179)
+
+=> "PATH_TO_BE_CONFIGURED/test.record" to "YOUR_PATH FOR_TEST_RECORD/test.record" 
+example:"data/test.record"(line 191)
+
+=> "PATH_TO_BE_CONFIGURED/icube-detection.pbtxt.pbtxt" to "YOUR_PATH FOR_'.pbtxt'_FILE/icube-detection.pbtxt.pbtxt" 
+example:"data/icube-detection.pbtxt.pbtxt"(line 193)
+
+
+
+note : if you get our of memmory or memory error try to change the batch_size = 24 to which suits you the best(line 34)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
